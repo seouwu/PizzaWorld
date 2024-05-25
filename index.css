@@ -1,0 +1,620 @@
+:root{
+    --mainFont:"Poetsen One","Jua";
+    --mainColor:rgb(255, 166, 0);
+    --secondColor:rgb(243, 116, 43);
+    --thirdColor:rgb(255, 198, 41);
+    --niceBlack:rgb(58, 58, 58);
+    --shadow:rgb(206, 193, 177);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+}
+a{
+    color: var(--niceBlack);
+    text-decoration: none;
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 5rem;
+    z-index: 200;
+    box-shadow: 0 0 10px rgb(201, 201, 201);
+    background: white;
+}
+#nav{
+    position: fixed;
+    width: 100%;
+    height: auto;
+    padding: 0 5rem;
+    top: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mainFont);
+    font-size: 2rem;
+}
+#logo{
+    color: var(--mainColor);
+}
+#nav__list{
+    position: relative;
+    right: 32rem;
+    z-index: 200;
+}
+#nav__list__link{
+    position: fixed;
+    display: flex;
+    list-style: none;
+}
+#nav__list__link>li{
+    margin-left: 5rem;
+}
+#nav__list__link>li>a:hover{
+    color: var(--secondColor);
+}
+i{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#heart{
+    color: palevioletred;
+    cursor: pointer;
+}
+#exit,#menu{
+    display: none;
+}
+@media screen and (max-width:1350px) {
+    #menu{
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+    #exit,#menu{
+        display: block;
+    }
+    i{
+        cursor: pointer;
+    }
+    #nav__list{
+        position: relative;
+        top: -1.2rem;
+        right: 32rem;
+        display: none;
+    }
+    #nav__list__link{
+        width: 80%;
+        height: 100%;
+        padding: 5rem;
+        display:grid;
+        grid-row: 5rem;
+        right: 0;
+        background: rgba(255, 166, 0, 0.749);
+        list-style: none;
+    }
+    #nav__list__link>li{
+        margin-left: 5rem;
+        
+    }
+    #nav__list__link>li>a:hover{
+        color: white;
+    }
+    #heart{
+        position: fixed;
+        right: 10rem;
+    }
+    #exit{
+        position: fixed;
+        top: 2rem;
+        right: 10rem;
+        font-size: 3rem;
+    }
+}
+.box{
+    width: 100%;
+}
+.section{
+    position: relative;
+    width: 1920px;
+    height: 1200px;
+    margin: 0 auto;
+    padding: 10rem 10rem;
+}
+/* @media screen and (min-width:1921px) {
+    body{
+        width: 100%;
+    }
+    .section{
+        position: relative;
+        width: 100%;
+        height: 1400px;
+        padding: 10rem 10%;
+    }
+    #SIDE{
+        padding: 10rem 15%;
+    }
+    #STORE{
+        padding: 10rem 15%;
+    }
+} */
+/* 메인 페이지 */
+#HOME{
+    position: relative;
+    padding-top: 8rem;
+}
+#main_img{
+    position: relative;
+    display: inline-block;
+    width: 700px;
+    filter:drop-shadow(-2rem 0 10rem var(--mainColor));
+}
+#main_text{
+    position: absolute;
+    display: inline-block;
+    top: 30%;
+    right: 10%;
+    font-family: var(--mainFont);
+}
+#main_text_header{
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--mainColor);
+}
+#main_text_context{
+    font-size: 2.5rem;
+}
+#main_button{
+    position: relative;
+    width: 100%;
+    top:3rem;
+    padding: 2rem 12.5rem;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: white;
+    background: var(--secondColor);
+    animation-name: colors;
+    animation-duration: 1s;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+}
+@keyframes colors {
+    from{
+        position: relative;
+        background:var(--mainColor);
+        }
+    to{
+        position: relative;
+        background:var(--secondColor);
+        }
+}
+#main_down{
+    position: relative;
+    text-align: center;
+    bottom: -10rem;
+    font-size: 2rem;
+    font-family: var(--mainFont);
+    animation-name: wiggle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes wiggle{
+    from{
+        position: relative;
+        bottom: -8rem;
+    }
+    to{
+        position: relative;
+        bottom: -10rem;
+    }
+}
+/* 이유 페이지 */
+#REASON{
+    position: relative;
+    padding-top: 8rem;
+    font-family: var(--mainFont);
+    background: var(--mainColor);
+}
+#REASON h1,#REASON h2{
+    position: relative;
+    top: -1rem;
+    left: 1rem;
+    font-size: 6rem;
+    color: white;
+    text-shadow: 0.5rem 1.2rem var(--secondColor);
+    z-index: 10;
+}
+#reason_list{
+    position: relative;
+    font-size: 2rem;
+    margin: 2rem 0 0 1rem;
+    font-family: var(--mainFont);
+    list-style: none;
+    z-index: 100;
+}
+#reason_list li{
+    margin: 1rem 0 2rem 1rem
+}
+.reason_header{
+    position: relative;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: rgb(62, 48, 25);
+}
+.reason_header i{
+    margin-bottom: auto;
+    font-size: 2.5rem;
+    color: rgb(243, 63, 93);
+}
+.reason_context{
+    font-size: 2.5rem;
+}
+.reason_icon{
+    position: absolute;
+    filter: drop-shadow(1rem 1rem var(--secondColor));
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* filter: opacity( .5); */
+}
+#reason_icon_leaf1{
+    width: 15%;
+    top: -1rem;
+    left: 0;
+    transform: rotate(100deg);
+    z-index: 0;
+}
+#reason_icon_leaf2{
+    width: 10%;
+    top:10rem;
+    left: 1.5rem;
+    transform: rotate(70deg);
+}
+#reason_icon_leaf3{
+    width: 6%;
+    top:15rem;
+    right: 50rem;
+    filter: drop-shadow(1rem 0 var(--secondColor));
+    transform: rotate(98deg);
+    animation-name: leaf3;
+    animation-delay: 0.6s;
+}
+@keyframes leaf3 {
+    from{
+        position: absolute;
+        top:8.5rem;
+    }
+    to{
+        position: absolute;
+    }
+}
+#reason_icon_leaf4{
+    width: 5%;
+    top:50rem;
+    right: 10rem;
+    transform: rotate(12deg);
+    animation-name: leaf4;
+    animation-delay: 0.2s;
+}
+@keyframes leaf4 {
+    from{
+        position: absolute;
+        top:42rem;
+    }
+    to{
+        position: absolute;
+    }
+}
+#reason_icon_pizza{
+    right: 15rem;
+    top:15rem;
+    transform: rotate(-10deg);
+    animation-name: UpDown ;
+    animation-delay: 0.4s;
+}
+@keyframes UpDown {
+    from{
+        position: absolute;
+        top:10rem;
+    }
+    to{
+        position: absolute;
+    }
+}
+#reason_icon_plate{
+    right: 38rem;
+    bottom:-1rem;
+    transform: rotate(20deg);
+    filter: drop-shadow(1rem 1rem var(--secondColor));
+    animation-name: plate ;
+}
+@keyframes plate {
+    from{
+        position: absolute;
+        bottom: 7rem;
+    }
+    to{
+        position: absolute;
+    }
+}
+/* 사이드메뉴 */
+#SIDE{
+    position: relative;
+    font-family: var(--mainFont);
+}
+#SIDE h1{
+    position: relative;
+    text-align: end;
+    top:0;
+    right: 0;
+    font-size: 5rem;
+    text-shadow: 0 0.5rem var(--thirdColor);
+}
+#SIDE h1 img{
+    position: relative;
+    width: 7rem;
+    top: 2rem;
+}
+#side_menu_box{
+    position: relative;
+    width: 100%;
+    height: 50rem;
+    padding: 0 1rem;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0 0  var(--secondColor);
+    background:var(--thirdColor);
+}
+.side_menu{
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: 40rem;
+    top: 5rem;
+}
+#side_menu_img{
+    width: 60%;
+}
+#img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: 20px;
+    background-position: 60%;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url();
+    z-index: 100;
+}
+#side_menu_img button{
+    cursor: pointer;
+    border: none;
+    font-size: 5rem;
+    background:transparent;
+}
+#side_menu_context{
+    position: relative;
+    padding: 0 1rem;
+    display: block;
+    text-align: center;
+    font-size: 2.5rem;
+}
+#side_menu_name{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    padding-top:1.5rem;
+}
+#side_menu_description{
+    position: relative;
+    align-self: center;
+    display: block;
+    border-radius: 20px;
+    width: 100%;
+    height: 80%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
+    line-height: 6rem;
+    background: white;
+}
+/* 추천하는 맛집 */
+#STORE{
+    position: relative;
+    margin-top: 0;
+    background: var(--secondColor);
+}
+#STORE h1{
+    position: relative;
+    font-size: 5rem;
+    font-family: var(--mainFont);
+    color: white;
+    text-shadow: 0 0.7rem var(--mainColor);
+}
+#store_list{
+    position: relative;
+    height: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    top: 2rem;
+    padding: 3rem 15rem;
+    border-radius: 20px;
+    align-items: end;
+    text-align: center;
+    list-style: none;
+    background: white;
+    font-family: var(--mainFont);
+}
+#store_list li{
+    position: relative;
+    width: 20%;
+    margin: 0 3rem;
+}
+.store_des{
+    position: absolute;
+    width: 55rem;
+    height: 47rem;
+    padding: 2rem;
+    border-radius: 20px;
+    font-size: 3rem;
+    background: rgb(255, 255, 255);
+    filter:opacity(90%);
+    z-index: 100;
+    display: none;
+}
+.store_des h5{
+    margin: 5rem;
+}
+.store_des i{
+    font-size: 4rem;
+    color: var(--thirdColor);
+}
+.store_name{
+    font-size: 4rem;
+}
+#store_des1{
+    width: 40rem;
+    right: -43rem;
+    top: -1rem;
+    padding: 2rem 0;
+}
+#store_des2{
+    right: -60rem;
+    top: -11rem;
+}
+#store_des3{
+    right: 18rem;
+    top: -21rem;
+}
+#rank1:hover~#store_des1{
+    display: block;
+}
+#rank2:hover~#store_des2{
+    display: block;
+}
+#rank3:hover~#store_des3{
+    display: block;
+}
+.store_img{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 200px;
+    border-radius: 100%;
+    background-color: aqua;
+}
+.rank{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.rank:hover{
+    position: relative;
+    width: 200%;
+}
+#rank1{
+    position: relative;
+    width: 100%;
+    height: 30rem;
+    background: rgb(255, 191, 0);
+}
+#rank2{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background: rgb(255, 113, 136);
+    
+}
+#rank3{
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    background: rgb(121, 166, 255);
+}
+/* 나의 연락처 */
+#CONTACT{
+    position: relative;
+    text-align: center;
+    font-family: var(--mainFont);
+}
+#contact_img{
+    position: relative;
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 100%;
+    margin: auto;
+    filter:drop-shadow(0px 10px rgb(135, 153, 255));
+}
+#contact_name{
+    margin: 1rem;
+    font-size: 3rem;
+}
+#contact_intro{
+    display: flex;
+}
+.intros{
+    position: relative;
+    width:60rem;
+    height: 50rem;
+    padding: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20px;
+    filter: drop-shadow(0 1rem rgb(135, 153, 255));
+    background: rgb(235, 237, 241);
+}
+.intros h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.contact_list li{
+    position: relative;
+    margin: 2rem;
+    font-size: 2rem;
+
+    list-style: none;
+}
+#contact_list{
+    position: relative;
+    display: grid;
+    justify-content: space-evenly;
+    height: 80%;
+}
+#contact_list li{
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    font-size: 5rem;
+}
+#contact_list i{
+    position: relative;
+    margin-right: 2rem;
+}
+#git:hover{
+    color: rgb(86, 0, 184);
+}
+#gmail:hover{
+    color: rgb(184, 50, 50);
+}
+#chat:hover{
+    color: rgb(211, 162, 0);
+}
+/* 기타정보 footer */
+footer{
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    margin-top: 20rem;
+    text-align: center;
+    color: white;
+    background: var(--niceBlack);
+}
+footer>div>div>a{
+    color: white;
+}
