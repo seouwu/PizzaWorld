@@ -1,2 +1,0 @@
-# PizzaWorld
-Making Website assignment
